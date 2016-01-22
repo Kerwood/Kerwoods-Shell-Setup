@@ -5,5 +5,5 @@ This is a Bash script for setting up my shell enviroment on a fresh Debian serve
 Use it at own risk.
 
 ```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://github.com/Kerwood/Kerwoods-Shell-Setup/blob/master/shell-setup.sh)"
 ```
