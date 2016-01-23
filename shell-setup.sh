@@ -69,8 +69,6 @@ rm -rf tmux-mem-cpu-load
 
 
 
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Kerwood/Kerwoods-Shell-Setup/master/shell-setup.sh)"
 echo -n "${GREEN} [+] Downloading Vim configuraiton files${NORMAL}"
 mkdir -p ~/.vim/colors
 curl -o ~/.vim/colors/monokai.vim https://raw.githubusercontent.com/Kerwood/Kerwoods-Shell-Setup/master/Vim/monokai.vim > /dev/null 2>&1
@@ -85,21 +83,14 @@ fi
 
 
 
-echo -n "${GREEN} [+] Installing Oh My Zsh${NORMAL}"
+echo "${GREEN} [+] Installing Oh My Zsh${NORMAL}"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 curl -o ~/.oh-my-zsh/themes/kerwood.zsh-theme https://raw.githubusercontent.com/Kerwood/Kerwoods-Shell-Setup/master/Oh-my-zsh/kerwood.zsh-theme > /dev/null 2>&1
 sed -i -e "s/robbyrussell/kerwood/g" ~/.zshrc
 
-if [ $? -eq 0 ]; then
-	echo "${GREEN} .. Done!${NORMAL}"
-else
-	echo "${RED} .. Failed!${NORMAL}"
-fi
 
 
-
-
-
+echo
 echo -n "${GREEN} [+] Enableing tmux auto start${NORMAL}"
 cat >> ~/.zshrc << \EOF
 
