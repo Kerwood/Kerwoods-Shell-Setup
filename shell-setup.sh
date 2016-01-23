@@ -40,12 +40,13 @@ curl -o ~/.vimrc https://raw.githubusercontent.com/Kerwood/Kerwoods-Shell-Setup/
 
 
 echo "${GREEN} [+] Installing Oh My Zsh${NORMAL}"
-echo
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | exit
 curl -o ~/.oh-my-zsh/themes/kerwood.zsh-theme https://raw.githubusercontent.com/Kerwood/Kerwoods-Shell-Setup/master/Oh-my-zsh/kerwood.zsh-theme > /dev/null 2>&1
 sed -i -e "s/robbyrussell/kerwood/g" ~/.zshrc
 
+echo "${GREEN} [+] Enableing tmux auto start${NORMAL}"
 cat >> ~/.zshrc << \EOF
 
 # Start Tmux at login
@@ -53,3 +54,6 @@ if [[ $(echo $TTY | cut -d \/ -f 4) = '0' ]]; then
 	tmux -2 a || tmux -2
 fi
 EOF
+
+echo
+echo "${GREEN} [+] Done!..${NORMAL}"
