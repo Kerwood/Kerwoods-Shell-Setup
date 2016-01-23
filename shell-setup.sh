@@ -29,12 +29,12 @@ curl -o ~/.tmux.conf https://raw.githubusercontent.com/Kerwood/Kerwoods-Shell-Se
 
 echo "${GREEN} [+] Installing tmux-mem-cpu-load${NORMAL}"
 
-sudo apt-get -y install cmake g++ > /dev/null
-git clone https://github.com/thewtex/tmux-mem-cpu-load.git > /dev/null
+sudo apt-get -y install cmake g++ # > /dev/null
+git clone https://github.com/thewtex/tmux-mem-cpu-load.git # > /dev/null
 cd tmux-mem-cpu-load
-cmake . > /dev/null
-make > /dev/null
-sudo make install > /dev/null
+cmake . # > /dev/null
+make # > /dev/null
+sudo make install # > /dev/null
 cd ..
 rm -rf tmux-mem-cpu-load
 
