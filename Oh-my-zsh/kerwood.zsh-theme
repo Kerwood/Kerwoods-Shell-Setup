@@ -8,7 +8,7 @@ local user="${blue_op}%{$fg_bold[cyan]%}%n%{$reset_color%}${blue_cp}"
 local arrow="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)%{$reset_color%}"
 
 PROMPT='╭─${host}─${user}─${path_p} %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}
-╰─ ${arrow}%{$fg_bold[cyan]%}%c%{$reset_color%} '
+╰─ ${arrow}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
