@@ -24,7 +24,12 @@ sudo apt-get -y install git zsh tmux vim curl > /dev/null
 echo "${GREEN} [+] Downloading tmux.conf${NORMAL}"
 curl -o ~/.tmux.conf https://raw.githubusercontent.com/Kerwood/Kerwoods-Shell-Setup/master/Tmux/.tmux.conf > /dev/null 2>&1
 
-
+echo "${GREEN} [+] Installing Vim Docker Syntax${NORMAL}"
+git clone https://github.com/ekalinin/Dockerfile.vim.git
+cd Dockerfile.vim
+make install
+cd ..
+rm -rvf Dockerfile.vim
 
 echo "${GREEN} [+] Installing tmux-mem-cpu-load${NORMAL}"
 
