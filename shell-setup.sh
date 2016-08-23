@@ -17,8 +17,8 @@ echo "${GREEN} [+] Updating apt-get${NORMAL}"
 sudo apt-get update > /dev/null
 
 
-echo "${GREEN} [+] Installing git, zsh, tmux, vim${NORMAL}"
-sudo apt-get -y install git zsh tmux vim > /dev/null
+echo "${GREEN} [+] Installing git, zsh, tmux, vim, cmake${NORMAL}"
+sudo apt-get -y install git zsh tmux vim cmake > /dev/null
 
 
 echo "${GREEN} [+] Downloading tmux.conf${NORMAL}"
