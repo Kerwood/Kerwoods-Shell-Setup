@@ -40,7 +40,7 @@ cmake . > /dev/null
 make > /dev/null
 sudo make install > /dev/null
 cd ..
-rm -rf tmux-mem-cpu-load
+rm -rf tmux-mem-cpu-load > /dev/null
 
 
 
